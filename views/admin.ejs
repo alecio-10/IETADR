@@ -1,0 +1,95 @@
+<%-include('plantilla/sedes.ejs', {Titulo: 'Administracion General'}); %>
+<link rel="shortcut icon" href="/public/globo.gif" type="image/x-icon">
+<body>
+    <div class="container"></div>
+    <h1>Personero</h1>
+    <table class="table-dark">
+        <thead>
+            <th scope="col">Nombre</th>
+            <th scope="col">Total Votos</th>
+            
+        </thead>
+        <tbody>
+            <% per.forEach((r)=>{%>
+                <tr class="table-light">
+                     <td>  <%=r.Nombre%></td>
+                    <td><%=r.TotalVotos%></td>
+                </tr>
+            <%})%>
+       </tbody>
+    </table>
+    <h1>Consejo Estudiantil - Sede 2</h1>
+    <table>
+    <thead>
+        <th scope="col">Curso</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Total Votos</th>
+        
+    </thead>
+    <tbody>
+        <% sede2.forEach((r)=>{%>
+            <tr class="table-light">
+                <td><%=r.Curso%></td>
+                <td> <%=r.Nombre%></td>
+                <td><%=r.TotalVotos%></td>
+            </tr>
+        <%})%>
+   </tbody>
+</table>
+<h1>Consejo Estudiantil -Sede Principal</h1>
+<table>
+<thead>
+    <th scope="col">Curso</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Total Votos</th>
+    
+</thead>
+<tbody>
+    <% principal.forEach((r)=>{%>
+        <tr class="table-light">
+            <td><%=r.Curso%></td>
+            <td><%=r.Nombre%></td>
+            <td><%=r.TotalVotos%></td>
+        </tr>
+    <%})%>
+</tbody>
+</table>
+<h1>Consejo Estudiantil - Sede 3</h1>
+    <table>
+    <thead>
+        <th scope="col">Curso</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Total Votos</th>
+        
+    </thead>
+    <tbody>
+        <% sede3.forEach((r)=>{%>
+            <tr class="table-light">
+                <td><%=r.Curso%></td>
+                <td> <%=r.Nombre%></td>
+                <td><%=r.TotalVotos%></td>
+            </tr>
+        <%})%>
+   </tbody>
+</table>
+<h1>Consejo Estudiantil - Sede 4</h1>
+    <table>
+    <thead>
+        <th scope="col">Curso</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Total Votos</th>
+        
+    </thead>
+    <tbody>
+        <% sede4.forEach((r)=>{%>
+            <tr class="table-light">
+                <td><%=r.Curso%></td>
+                <td> <%=r.Nombre%></td>
+                <td><%=r.TotalVotos%></td>
+            </tr>
+        <%})%>
+   </tbody>
+</table>
+</div>
+</body>
+</html>

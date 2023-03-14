@@ -1,0 +1,103 @@
+<%-include('plantilla/sedes.ejs', {Titulo: 'Sede Monte Carlos'}); %>
+<link rel="shortcut icon" href="/public/globo.gif" type="image/x-icon">
+<style>
+    .r{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        
+       
+    }
+    .rep{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        }
+        .rep2{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        }
+                  
+    </style>
+<body>
+    <div class="container-fluid">
+        <div class="abs-center" id="ir" >
+                <div style="align-self: center"  >
+                <h1  style="text-align: center" >PERSONERIA</h1>
+                <button name="nombre" value="helena" class="r" ><img src="/public/fotos/Helenaperezfuente11-01.jpg" class="r"></button> 
+                <h4>Helena Perez Fuentes 11-01</h4> 
+                <button name="nombre" value="mariaS" class="r"><img src="/public/fotos/Maria Julieth Soto 11-02.jpg" class="r"></button>
+                <h4>Maria Julieth Soto 11-02</h4>
+                <button name="nombre" value="mariaP" class="r"><img src="/public/fotos/Maria Jose Pacheco 11-03.jpg" class="r"></button>
+                <h4>Maria Jose Pacheco 11-03</h4>
+            </div>
+            <br>
+        </div>
+        <div id="consejo">
+            <form action="/consejo3" method="POST">
+            <table style="width: 100%;height: 90vh;">
+                <h1 style="text-align: center">CONSEJO ESTUDIANTIL</h1>
+                <thead style="align-self: center; text-align: center;">
+               </thead>
+                <tbody>
+                  <tr style="text-align: center; align-items: center;">
+                    <td>3</td>
+                    <td><button name="nombre" value="MariaCamila" class="rep"><img src="/public/fotos/Monte Carlos/Maria Camila Moreno 3-01 Montecarlos.jpg" class="rep2" ></button></td>
+                    <td><button name="nombre" value="Saileska" class="rep"><img src="/public/fotos/Monte Carlos/Saileska Gonzalez 3-02 Montecarlo.jpg" class="rep2" ></button></td>
+                    <tr style="text-align: center; align-items: center;"><td></td> <td>Maria Camila Moreno</td><td>Saileska Gonzalez</td></tr>
+                    </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>4</td>
+                    <td><button name="nombre" value="Sair" class="rep"><img src="/public/fotos/Monte Carlos/Sair Roberto Llerena 4-01 Montecarlos.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="MariaAngel" class="rep"><img src="/public/fotos/Monte Carlos/Maria Angel Góngora Perez 4-02 Monte Carlos.jpg" class="rep2"></button></td>
+                    <tr style="text-align: center; align-items: center;"><td></td> <td>Sair</td><td>Maria Angel</td></tr>    
+                </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>5</td>
+                    <td><button name="nombre" value="Yimberlin" class="rep"><img src="/public/fotos/Monte Carlos/Yimberlin Sofia Sanchez 5-01 montecarlos.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Jhon" class="rep"><img src="/public/fotos/Monte Carlos/Jhon Alexander Marrugo 5-02 Monte Carlos.jpg" class="rep2"></button></td>
+                    <tr style="text-align: center; align-items: center;"><td></td> <td>Yimberlin</td><td>Jhon Alexander</td></tr>    
+                </tr>
+                
+            </tbody>
+        </table>
+    </form>
+ </div>
+    </div>
+<script>
+    let boton = document.getElementsByClassName("r")
+    const req = new XMLHttpRequest()
+   boton[0].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+req.open("POST", "/registrar");
+req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+req.send("nombre=helena");
+ window.location.href = "#consejo";
+    })
+boton[4].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+req.open("POST", "/registrar");
+req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+req.send("nombre=mariaP");
+ window.location.href = "#consejo";
+    })
+    boton[2].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+req.open("POST", "/registrar");
+req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+req.send("nombre=mariaS");
+ window.location.href = "#consejo";
+    })
+let audio= new Audio()
+    audio.src = "/Public/Publico.mp3"
+    audio.play()
+
+</script>
+</body>

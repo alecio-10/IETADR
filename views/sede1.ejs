@@ -1,0 +1,123 @@
+<%-include('plantilla/sedes.ejs', {Titulo: 'Sede Principal'}); %>
+<link rel="shortcut icon" href="/public/globo.gif" type="image/x-icon">
+<style>
+    .r{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    .rep{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        }
+        .rep2{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        }
+        </style>
+<body>
+    <div class="container-fluid">
+        <div class="abs-center" id="ir" >
+                <div style="align-self: center"  >
+                <h1  style="text-align: center" >PERSONERIA</h1>
+                <button name="nombre" value="helena" class="r" ><img src="/public/fotos/Helenaperezfuente11-01.jpg" class="r"></button> 
+                <h4>Helena Perez Fuentes 11-01</h4> 
+                <button name="nombre" value="mariaS" class="r"><img src="/public/fotos/Maria Julieth Soto 11-02.jpg" class="r"></button>
+                <h4>Maria Julieth Soto 11-02</h4>
+                <button name="nombre" value="mariaP" class="r"><img src="/public/fotos/Maria Jose Pacheco 11-03.jpg" class="r"></button>
+                <h4>Maria Jose Pacheco 11-03</h4>
+            </div>
+            <br>
+        </div>
+        <div id="consejo">
+            <form action="/consejo" method="POST">
+            <table style="width: 100%;height: 90vh;">
+                <h1 style="text-align: center">CONSEJO ESTUDIANTIL</h1>
+                <thead style="align-self: center; text-align: center;">
+               </thead>
+                <tbody>
+                  <tr style="text-align: center; align-items: center;">
+                    <td>6</td>
+                    <td><button name="nombre" value="Maria" class="rep"><img src="/public/fotos/Maria Jose Torres 6-01.jpg" class="rep2" ></button></td>
+                    <td><button name="nombre" value="Maifer" class="rep"><img src="/public/fotos/Maifer Dayana Torres 6-02.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Liz" class="rep"><img src="/public/fotos/Liz Ochoa 6-03.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Jorgendris" class="rep"><img src="/public/fotos/Jorgendris Cortecero 6-04.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Camila" class="rep"><img src="/public/fotos/Camila Hernandez 6-05.jpg" class="rep2"></button></td>
+                </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>7</td>
+                    <td><button name="nombre" value="JuanEsteban" class="rep"><img src="/public/fotos/Juan Esteban Fuentes 7-01.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="LeidysJohana" class="rep"><img src="/public/fotos/Leidys Johana Obrian 7-02.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Emeli" class="rep"><img src="/public/fotos/Emeli fabra Martinez 7-03.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="AnibalRafael" class="rep"><img src="/public/fotos/Anibal Rafael Castro 7-04.jpg" class="rep2"></button></td>
+                </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>8</td>
+                    <td><button name="nombre" value="Mathyus" class="rep"><img src="/public/fotos/Mathyus Hernandez 8-01.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Sara" class="rep"><img src="/public/fotos/Sara Troconis 8-02.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Thais" class="rep"><img src="/public/fotos/Thais Daniela Marrugo 8-03.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Junior" class="rep"><img src="/public/fotos/Junior Solano 8-04.jpg" class="rep2"></button></td>
+                </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>9</td>
+                    <td><button name="nombre" value="Dereck" class="rep"><img src="/public/fotos/Dereck Marquez 9-01.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Yeiker" class="rep"><img src="/public/fotos/Yeiker David Torres 9-02.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Letzy" class="rep"><img src="/public/fotos/Letzy Ochoa 9-03.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Julian" class="rep"><img src="/public/fotos/Julian Quintero 9-04.jpg" class="rep2"></button></td>
+                </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>10</td>
+                    <td><button name="nombre" value="Deider" class="rep"><img src="/public/fotos/Deider Cantillo 10-01.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Samantha" class="rep"><img src="/public/fotos/Samantha Fuentes 10-02.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Emelin" class="rep"><img src="/public/fotos/Emelin Florez 10-03.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="AnaMilena" class="rep"><img src="/public/fotos/Ana Milena Muñoz 10-04.jpg" class="rep2"></button></td>
+                </tr>
+                <tr style="text-align: center; align-items: center;">
+                    <td>11</td>
+                    <td><button name="nombre" value="Fabian" class="rep"><img src="/public/fotos/Fabian Perez 11-01.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Angelo" class="rep"><img src="/public/fotos/Angelo Cedeño 11-02.jpg" class="rep2"></button></td>
+                    <td><button name="nombre" value="Michel" class="rep"><img src="/public/fotos/Michel Zabaleta 11-03.jpg" class="rep2"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+ </div>
+    </div>
+<script>
+    let boton = document.getElementsByClassName("r")
+    const req = new XMLHttpRequest()
+   boton[0].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+req.open("POST", "/registrar");
+req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+req.send("nombre=helena");
+ window.location.href = "#consejo";
+    })
+boton[4].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+req.open("POST", "/registrar");
+req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+req.send("nombre=mariaP");
+ window.location.href = "#consejo";
+    })
+    boton[2].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+req.open("POST", "/registrar");
+req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+req.send("nombre=mariaS");
+ window.location.href = "#consejo";
+    })
+let audio= new Audio()
+    audio.src = "/Public/Publico.mp3"
+    audio.play()
+
+</script>
+</body>
