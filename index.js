@@ -118,13 +118,13 @@ app.post("/registrar", async(req,res)=>{
         const datos = req.body.nombre
         const DB = Personeros.find()
         const cont= await Personeros.findOne({Nombre:req.body.nombre},"TotalVotos")
-        if (datos=="helena"){ 
+        if (datos=="paola"){ 
             DB[0] = await Personeros.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
             }
-        if (datos=="mariaS"){ 
+        if (datos=="karla"){ 
             DB[1] = await Personeros.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
             }
-        if (datos=="mariaP"){ 
+        if (datos=="freddy"){ 
             DB[2] = await Personeros.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
             }
                 res.render("sede1")
