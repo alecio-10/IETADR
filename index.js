@@ -128,8 +128,7 @@ app.post("/registrar", async(req,res)=>{
             DB[2] = await Personeros.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
             }
         res.render("sede1")
-        
-    } catch (error) {
+        } catch (error) {
         console.log(error)
     }
 });
@@ -161,7 +160,7 @@ app.post("/consejo", async(req,res)=>{
          if (datos=="MariaCamila"){ 
             DB[5] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
-         if (datos=="marisolMurcia"){ 
+         if (datos=="MarisolMurcia"){ 
             DB[6] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
          if (datos=="MarisolQuiroz"){ 
