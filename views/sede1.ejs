@@ -92,7 +92,6 @@
     </div>
 <script>
 let boton = document.querySelectorAll(".r")
-console.log(boton);
 const req = new XMLHttpRequest()
 boton[0].addEventListener("click",(e)=>{
     const req = new XMLHttpRequest();
@@ -112,14 +111,13 @@ boton[1].addEventListener("click",(e)=>{
     req.send("nombre=karla");
     window.location.href = "#consejo";
     });
-boton[2].addEventListener("click",(e)=>{
+boton[4].addEventListener("click",(e)=>{
     const req = new XMLHttpRequest();
     req.addEventListener("load", ()=>{
     });
     req.open("POST", "/registrar");
     req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
     req.send("nombre=freddy");
-    alert("gnvhjvhjhjh")
     window.location.href = "#consejo";
     });
 let audio= new Audio()
