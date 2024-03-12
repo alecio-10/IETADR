@@ -29,6 +29,8 @@
             <h4>Karla Buelvas 11-02</h4>
             <button name="nombre" value="Freddy" class="r"><img src="/public/fotos/Freddy Guardo 11-03 per.jpg" class="r"></button>
             <h4>Freddy Guardo 11-03</h4>
+            <button name="nombre" value="Blanco" class="r"><img src="/public/fotos/Blanco.jpeg" class="r"></button>
+            <h4>Voto en Blanco</h4>
         </div>
         <br>
     </div>
@@ -92,7 +94,16 @@ req.open("POST", "/registrar");
 req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
 req.send("nombre=freddy");
  window.location.href = "#consejo";
-    })
+    });
+boton[6].addEventListener("click",(e)=>{
+    const req = new XMLHttpRequest();
+    req.addEventListener("load", ()=>{
+    });
+    req.open("POST", "/registrar");
+    req.setRequestHeader("Content-Type"," application/x-www-form-urlencoded")
+    req.send("nombre=Blanco");
+    window.location.href = "#consejo";
+    });
 let audio= new Audio()
     audio.src = "/Public/Publico.mp3"
     audio.play()

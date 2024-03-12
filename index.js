@@ -127,6 +127,9 @@ app.post("/registrar", async(req,res)=>{
         if (datos=="freddy"){ 
             DB[2] = await Personeros.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
             }
+        if (datos=="Blanco"){ 
+            DB[3] = await Personeros.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
+            }
         res.render("sede1")
         } catch (error) {
         console.log(error)
