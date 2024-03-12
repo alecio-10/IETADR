@@ -344,5 +344,4 @@ app.get("/admin",async (req,res)=>{
     const conse = await consejo.find({TotalVotos:{$gte: -1}})
     res.render("admin",{per:per,sede2:s2,principal:conse,sede3:s3,sede4:s4})
 })
-
 app	.listen(PORT,console.log("servidor escuchando en "+ PORT));
