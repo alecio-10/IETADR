@@ -212,7 +212,7 @@ app.post("/consejo", async(req,res)=>{
          if (datos=="Samantha"){ 
             DB[21] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
-         if (datos=="AnaMilena"){ 
+         if (datos=="Ana Milena"){ 
             DB[18] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
             res.render("sede1")
