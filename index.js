@@ -157,30 +157,30 @@ app.post("/consejo", async(req,res)=>{
          if (datos=="IsabelaR"){ 
             DB[5] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
-         if (datos=="MariaCamila"){ 
+         if (datos=="Maria Camila"){ 
             DB[5] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
-         if (datos=="MarisolMurcia"){ 
+         if (datos=="Marisol Murcia"){ 
             DB[6] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
-         if (datos=="MarisolQuiroz"){ 
+         if (datos=="Marisol Quiroz"){ 
             DB[7] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
          // octavos
-         if (datos=="MariLuna"){ 
+         if (datos=="Mari Luna"){ 
             DB[8] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
          if (datos=="Jesus"){ 
             DB[9] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
-         if (datos=="JoseDavid"){ 
+         if (datos=="Jose David"){ 
             DB[10] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
          if (datos=="Arlis"){ 
             DB[11] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
          //Novenos
-         if (datos=="LuzAngela"){ 
+         if (datos=="Luz Angela"){ 
             DB[12] = await DB.findOneAndUpdate({Nombre:datos},{$set : {TotalVotos:cont.TotalVotos+1}});
          }
          if (datos=="Ingrid"){ 
