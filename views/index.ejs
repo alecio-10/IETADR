@@ -11,13 +11,37 @@
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" required name="password" class="form-control" id="exampleInputPassword1" placeholder="Escriba su Password">
         </div>
-        <button type="submit" class="btn btn-primary">Validar</button>
+        <button type="submit" class="btn btn-primary" id="boton">Validar</button>
       </form>
     </div>
   </div>
   <script>
     document.getElementById("exampleInputEmail1")=""
     document.getElementById("exampleInputPassword1")=""
+    function SetFullScreen(elto) {
+    //Si no se soporta la API, ya ni lo intentamos
+    if (!FullScreenSupportEnabled()) return;
+    //Se prueba la variante apropiada según el navegador
+    try {
+        if (elto.requestFullscreen) {    //Empezando por la estándar
+            elto.requestFullscreen();
+        } else if (elto.webkitRequestFullscreen) {    //Webkit (Safari, Chrome y Opera 15+)
+            elto.webkitRequestFullscreen();
+        } else if (elto.mozRequestFullScreen) {    //Firefox
+            elto.mozRequestFullScreen();
+        } else if (elto.msRequestFullscreen) {    //Internet Explorer 11+
+            elto.msRequestFullscreen();
+        }
+    }
+    catch(ex) {
+        return false;
+    }
+    return true;
+}
+var boton=document.getElementById("boton")
+boton.addEventListener("click",()=>{
+                SetFullScreen( document.getElementById("boton") );
+            })
     
   </script>
 </body>
