@@ -18,6 +18,12 @@
   <script>
     document.getElementById("exampleInputEmail1")=""
     document.getElementById("exampleInputPassword1")=""
+    function FullScreenSupportEnabled() {
+    return (document.fullscreenEnabled || 
+            document.webkitFullscreenEnabled || 
+            document.mozFullScreenEnabled ||
+            document.msFullscreenEnabled);
+}
     function SetFullScreen(elto) {
     //Si no se soporta la API, ya ni lo intentamos
     if (!FullScreenSupportEnabled()) return;
